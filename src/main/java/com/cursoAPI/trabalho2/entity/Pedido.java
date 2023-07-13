@@ -35,6 +35,7 @@ public class Pedido {
     private String cliente;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Item> itens;
     
 }
